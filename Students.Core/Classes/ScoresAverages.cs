@@ -16,7 +16,7 @@ namespace Students.Core.Classes
         decimal totalAdded;
         decimal finalAverage;
 
-        public void CalculateAverage(StudentList myList)
+        public void CalculateAverage(List<StudentRecord> myList)
         {
             foreach (var item in myList)
             {

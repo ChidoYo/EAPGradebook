@@ -1,5 +1,6 @@
 ﻿using System;
 using Students.Core.Classes;
+using System.Collections.Generic;
 
 namespace EAPGradebook
 {
@@ -9,14 +10,14 @@ namespace EAPGradebook
         {
             MessageLine("Erick's GradeBook\n");
 
-            StudentList myList = new StudentList();
+            var myList = new List<StudentRecord>();
             ScoresAverages allGrades = new ScoresAverages();
 
             AddStudents(myList);
             GradebookLoop(myList, allGrades);
         }
 
-        private static void GradebookLoop(StudentList myList, ScoresAverages allGrades)
+        private static void GradebookLoop(List<StudentRecord> myList, ScoresAverages allGrades)
         {
             while (true)
             {
@@ -58,7 +59,7 @@ namespace EAPGradebook
             }
         }
 
-        private static void AddStudents(StudentList myList)
+        private static void AddStudents(List<StudentRecord> myList)
         {
             MessageLine("Press Return when done\n");
 
@@ -74,7 +75,7 @@ namespace EAPGradebook
                 }
                 else
                 {
-                    myList.AddStudent(name);
+                    myList.Add(new StudentRecord(name));
                     continue;
                 }
             }
