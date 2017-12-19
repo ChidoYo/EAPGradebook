@@ -35,11 +35,6 @@ namespace Students.Core.Classes
 
     public class StudentRecord
     {
-        public StudentRecord(string student)
-        {
-            Name = student;
-        }
-
         public decimal Score { get; set; }
         public string Name { get; set; }
     }
